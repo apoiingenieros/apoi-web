@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APOI — Academia de Preparación de Oposiciones para Ingenieros Industriales GVA</title>
+  <meta name="description"
+    content="Preparación especializada para las oposiciones de Ingeniero Industrial de la Generalitat Valenciana. Metodología probada, temario actualizado y acompañamiento personalizado.">
+  <meta name="keywords"
+    content="oposiciones ingeniero industrial GVA, preparación oposiciones Generalitat Valenciana, academia oposiciones ingenieros Valencia">
+  <link rel="canonical" href="https://www.apoi.es/">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ── Estilos específicos de la landing ── */
+
+    /* Animación de entrada */
+    .animar {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .animar.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .animar-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .animar-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .animar-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .animar-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding-top: 70px;
+      /* navbar */
+      background: linear-gradient(160deg, #0f2540 0%, #1a3a5c 55%, #2a5298 100%);
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 70% 30%, rgba(200, 146, 42, 0.12) 0%, transparent 60%),
+        radial-gradient(circle at 10% 80%, rgba(42, 82, 152, 0.4) 0%, transparent 50%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      padding: 80px 0;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200, 146, 42, 0.15);
+      border: 1px solid rgba(200, 146, 42, 0.4);
+      color: #f5c96a;
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      color: var(--blanco);
+      margin-bottom: 20px;
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    }
+
+    .hero h1 span {
+      color: #f5c96a;
+    }
+
+    .hero-subtitulo {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 1.15rem;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-botones {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 40px;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-card-titulo {
+      font-family: var(--font-display);
+      color: var(--blanco);
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-card-titulo span {
+      color: #f5c96a;
+    }
+
+    .hero-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .hero-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .hero-item-icono {
+      width: 36px;
+      height: 36px;
+      background: rgba(200, 146, 42, 0.2);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+
+    .hero-item-texto strong {
+      display: block;
+      color: var(--blanco);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .hero-item-texto span {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.83rem;
+    }
+
+    /* ── STATS ── */
+    .stats {
+      padding: 48px 0;
+      background: var(--blanco);
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 32px 24px;
+      border-right: 1px solid var(--borde);
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-numero {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--azul-marino);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-numero sup {
+      font-size: 1.4rem;
+      vertical-align: super;
+    }
+
+    .stat-texto {
+      font-size: 0.88rem;
+      color: var(--gris-medio);
+      font-weight: 500;
+    }
+
+    /* ── POR QUÉ AINSI ── */
+    .por-que-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .pq-tarjeta {
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      border-radius: var(--radio-lg);
+      padding: 36px 28px;
+      transition: var(--transicion);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pq-tarjeta::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--dorado);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .pq-tarjeta:hover {
+      box-shadow: var(--sombra-media);
+      transform: translateY(-4px);
+    }
+
+    .pq-tarjeta:hover::after {
+      transform: scaleX(1);
+    }
+
+    .pq-icono {
+      width: 52px;
+      height: 52px;
+      background: var(--azul-claro);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .pq-tarjeta h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .pq-tarjeta p {
+      font-size: 0.92rem;
+    }
+
+    /* ── CÓMO FUNCIONA ── */
+    .pasos-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+
+    .pasos-grid::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: calc(12.5% + 28px);
+      right: calc(12.5% + 28px);
+      height: 2px;
+      background: var(--borde);
+      z-index: 0;
+    }
+
+    .paso {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .paso-numero {
+      width: 56px;
+      height: 56px;
+      background: var(--azul-marino);
+      color: var(--blanco);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 auto 20px;
+      border: 3px solid var(--blanco);
+      box-shadow: 0 0 0 2px var(--azul-marino);
+    }
+
+    .paso h3 {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .paso p {
+      font-size: 0.85rem;
+    }
+
+    /* ── TEMARIO RESUMEN ── */
+    .temario-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .temario-lista {
+      list-style: none;
+    }
+
+    .temario-lista li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--borde);
+      font-size: 0.93rem;
+      color: var(--gris-oscuro);
+    }
+
+    .temario-lista li:last-child {
+      border-bottom: none;
+    }
+
+    .temario-lista li::before {
+      content: '▸';
+      color: var(--dorado);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .temario-info {
+      padding-left: 24px;
+    }
+
+    .temario-info h2 {
+      margin-bottom: 16px;
+    }
+
+    .temario-info p {
+      margin-bottom: 24px;
+    }
+
+    /* ── TESTIMONIOS ── */
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .testimonio {
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      border-radius: var(--radio-lg);
+      padding: 32px;
+      position: relative;
+    }
+
+    .testimonio::before {
+      content: '"';
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      font-family: var(--font-display);
+      font-size: 5rem;
+      color: var(--azul-claro);
+      line-height: 1;
+    }
+
+    .testimonio-texto {
+      font-size: 0.93rem;
+      line-height: 1.75;
+      margin-bottom: 20px;
+      color: var(--gris-oscuro);
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonio-autor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonio-avatar {
+      width: 44px;
+      height: 44px;
+      background: var(--azul-marino);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blanco);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .testimonio-nombre {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--azul-marino);
+    }
+
+    .testimonio-cargo {
+      font-size: 0.8rem;
+      color: var(--gris-medio);
+    }
+
+    /* ── CTA FINAL ── */
+    .cta-final {
+      background: linear-gradient(135deg, #0f2540 0%, #1a3a5c 100%);
+      padding: 96px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(200, 146, 42, 0.12) 0%, transparent 70%);
+    }
+
+    .cta-final h2 {
+      color: var(--blanco);
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .cta-final p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 36px;
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    .cta-botones {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .cta-nota {
+      margin-top: 20px;
+      font-size: 0.83rem;
+      color: rgba(255, 255, 255, 0.45);
+      position: relative;
+    }
+
+    /* ── FAQ ── */
+    .faq-lista {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid var(--borde);
+      border-radius: var(--radio);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .faq-pregunta {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--blanco);
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--azul-marino);
+      text-align: left;
+      transition: var(--transicion);
+    }
+
+    .faq-pregunta:hover {
+      background: var(--gris-claro);
+    }
+
+    .faq-icono {
+      font-size: 1.3rem;
+      color: var(--dorado);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.abierto .faq-icono {
+      transform: rotate(45deg);
+    }
+
+    .faq-respuesta {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding: 0 24px;
+      font-size: 0.92rem;
+      color: var(--gris-medio);
+      line-height: 1.75;
+    }
+
+    .faq-item.abierto .faq-respuesta {
+      max-height: 400px;
+      padding: 0 24px 20px;
+    }
+
+    /* ── Responsive hero ── */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-card {
+        display: none;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .por-que-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pasos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pasos-grid::before {
+        display: none;
+      }
+
+      .temario-cols {
+        grid-template-columns: 1fr;
+      }
+
+      .temario-info {
+        padding-left: 0;
+      }
+
+      .testimonios-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pasos-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══ NAVEGACIÓN ══════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="logo" aria-label="APOI - Inicio">
+          <span class="logo-siglas">APOI</span>
+          <span class="logo-texto">Academia de Preparación de Oposiciones para Ingenieros</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="temario.html">Temario</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <a href="https://wa.me/34633600849?text=Hola,%20me%20gustar%C3%ADa%20obtener%20información%20sobre%20la%20preparación%20de%20oposiciones"
+          class="btn btn-primario nav-cta" target="_blank" rel="noopener">
+          📲 Consulta gratuita
+        </a>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-mobile" role="menu">
+        <a href="index.html">Inicio</a>
+        <a href="temario.html">Temario</a>
+        <a href="precios.html">Precios</a>
+        <a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía completa</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ════════════════════════════════════════════════ -->
+  <header class="hero" role="banner">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-contenido">
+          <div class="hero-badge animar">🏛️ Especialistas en la GVA</div>
+          <h1 class="animar animar-delay-1">
+            Consigue tu plaza como<br>
+            <span>Ingeniero Industrial</span><br>
+            en la GVA
+          </h1>
+          <p class="hero-subtitulo animar animar-delay-2">
+            Preparación especializada y exclusiva para las oposiciones de la Generalitat Valenciana.
+            Temario actualizado, metodología probada y acompañamiento personalizado desde el primer día.
+          </p>
+          <div class="hero-botones animar animar-delay-3">
+            <a href="https://wa.me/34633600849?text=Hola,%20quiero%20información%20sobre%20la%20preparación%20de%20oposiciones%20de%20ingeniero%20industrial%20GVA"
+              class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:white;flex-shrink:0">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.527 5.845L.057 23.547a.5.5 0 0 0 .609.637l5.886-1.545A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.967 0-3.81-.537-5.388-1.473l-.385-.228-3.993 1.048 1.015-3.895-.249-.397A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+              </svg>
+              Consulta gratuita por WhatsApp
+            </a>
+            <a href="temario.html" class="btn btn-blanco btn-lg">Ver el programa</a>
+          </div>
+        </div>
+
+        <aside class="hero-card animar animar-delay-2" aria-label="Características del programa">
+          <div class="hero-card-titulo">¿Qué incluye la preparación <span>APOI</span>?</div>
+          <div class="hero-item">
+            <div class="hero-item-icono">📚</div>
+            <div class="hero-item-texto">
+              <strong>Temario completo GVA</strong>
+              <span>Actualizado a la última convocatoria oficial</span>
+            </div>
+          </div>
+          <div class="hero-item">
+            <div class="hero-item-icono">🧠</div>
+            <div class="hero-item-texto">
+              <strong>Técnicas de estudio</strong>
+              <span>Sesiones para estudiar de manera eficiente</span>
+            </div>
+          </div>
+          <div class="hero-item">
+            <div class="hero-item-icono">🧑‍🏫</div>
+            <div class="hero-item-texto">
+              <strong>Clases en directo</strong>
+              <span>Sesiones online en grupos reducidos</span>
+            </div>
+          </div>
+          <div class="hero-item">
+            <div class="hero-item-icono">📝</div>
+            <div class="hero-item-texto">
+              <strong>Simulacros de examen</strong>
+              <span>Tests y supuestos prácticos con corrección</span>
+            </div>
+          </div>
+          <div class="hero-item">
+            <div class="hero-item-icono">💬</div>
+            <div class="hero-item-texto">
+              <strong>Tutor personal</strong>
+              <span>Seguimiento individualizado de tu progreso</span>
+            </div>
+          </div>
+          <div class="hero-item">
+            <div class="hero-item-icono">🔔</div>
+            <div class="hero-item-texto">
+              <strong>Alertas de convocatoria</strong>
+              <span>Te avisamos de nuevas plazas y cambios</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ STATS ════════════════════════════════════════════════ -->
+  <section class="stats" aria-label="Datos de la academia">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item animar">
+          <div class="stat-numero"><span data-objetivo="94">0</span><sup>%</sup></div>
+          <div class="stat-texto">Tasa de presentados al examen final</div>
+        </div>
+        <div class="stat-item animar animar-delay-1">
+          <div class="stat-numero"><span data-objetivo="10">0</span><sup>+</sup></div>
+          <div class="stat-texto">Alumnos preparados</div>
+        </div>
+        <div class="stat-item animar animar-delay-2">
+          <div class="stat-numero"><span data-objetivo="5">0</span></div>
+          <div class="stat-texto">Años de experiencia especializada</div>
+        </div>
+        <div class="stat-item animar animar-delay-3">
+          <div class="stat-numero"><span data-objetivo="100">0</span><sup>%</sup></div>
+          <div class="stat-texto">Enfoque exclusivo en la GVA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ POR QUÉ AINSI ══════════════════════════════════════ -->
+  <section class="seccion seccion-gris" aria-labelledby="por-que-titulo">
+    <div class="container">
+      <div class="seccion-header">
+        <span class="etiqueta">Nuestra diferencia</span>
+        <h2 id="por-que-titulo">¿Por qué elegir APOI?</h2>
+        <span class="linea-dorada" aria-hidden="true"></span>
+        <p>No somos una academia generalista. Cada recurso, cada clase y cada test está diseñado para un único objetivo:
+          las oposiciones de Ingeniero Industrial de la GVA.</p>
+      </div>
+      <div class="por-que-grid">
+        <article class="pq-tarjeta animar">
+          <div class="pq-icono" aria-hidden="true">🎯</div>
+          <h3>Especialización total</h3>
+          <p>Conocemos el temario, los tribunales y los criterios de corrección de la GVA. Nada de material genérico
+            válido para cualquier comunidad.</p>
+        </article>
+        <article class="pq-tarjeta animar animar-delay-1">
+          <div class="pq-icono" aria-hidden="true">⚡</div>
+          <h3>Grupos reducidos</h3>
+          <p>Máximo 12 alumnos por grupo. Cada opositor recibe atención real, no se pierde entre decenas de personas.
+          </p>
+        </article>
+        <article class="pq-tarjeta animar animar-delay-2">
+          <div class="pq-icono" aria-hidden="true">🔄</div>
+          <h3>Temario siempre actualizado</h3>
+          <p>Actualizamos los apuntes con cada convocatoria y cada cambio normativo. Estudiarás exactamente lo que entra
+            en el examen.</p>
+        </article>
+        <article class="pq-tarjeta animar animar-delay-3">
+          <div class="pq-icono" aria-hidden="true">📊</div>
+          <h3>Seguimiento del progreso</h3>
+          <p>Informes periódicos de tu avance. Identificamos tus puntos débiles antes del examen, no después.</p>
+        </article>
+        <article class="pq-tarjeta animar animar-delay-1">
+          <div class="pq-icono" aria-hidden="true">🏛️</div>
+          <h3>Conocimiento institucional</h3>
+          <p>Entendemos cómo funciona la administración valenciana. Eso marca la diferencia en los supuestos prácticos.
+          </p>
+        </article>
+        <article class="pq-tarjeta animar animar-delay-2">
+          <div class="pq-icono" aria-hidden="true">📱</div>
+          <h3>100% online, sin desplazamientos</h3>
+          <p>Clases en directo con grabación disponible. Estudia desde donde estés, a tu ritmo, sin renunciar a la
+            interacción.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CÓMO FUNCIONA ══════════════════════════════════════ -->
+  <section class="seccion" aria-labelledby="como-titulo">
+    <div class="container">
+      <div class="seccion-header">
+        <span class="etiqueta">El proceso</span>
+        <h2 id="como-titulo">Cómo funciona la preparación</h2>
+        <span class="linea-dorada" aria-hidden="true"></span>
+      </div>
+      <div class="pasos-grid">
+        <div class="paso animar">
+          <div class="paso-numero">1</div>
+          <h3>Consulta inicial gratuita</h3>
+          <p>Analizamos tu situación de partida, tu disponibilidad y tus objetivos para orientarte al programa adecuado.
+          </p>
+        </div>
+        <div class="paso animar animar-delay-1">
+          <div class="paso-numero">2</div>
+          <h3>Diagnóstico de nivel</h3>
+          <p>Un test inicial nos permite identificar tus fortalezas y las áreas donde hay que poner más foco desde el
+            primer día.</p>
+        </div>
+        <div class="paso animar animar-delay-2">
+          <div class="paso-numero">3</div>
+          <h3>Plan de estudio personalizado</h3>
+          <p>Diseñamos un calendario realista adaptado a tu vida, no a la inversa. Con hitos claros y revisiones
+            periódicas.</p>
+        </div>
+        <div class="paso animar animar-delay-3">
+          <div class="paso-numero">4</div>
+          <h3>Presentarte al examen preparado</h3>
+          <p>Simulacros en condiciones reales, corrección detallada y ajuste final antes de la fecha del examen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TEMARIO RESUMEN ════════════════════════════════════ -->
+  <section class="seccion seccion-gris" aria-labelledby="temario-titulo">
+    <div class="container">
+      <div class="temario-cols">
+        <div>
+          <span class="etiqueta">El programa</span>
+          <h2 id="temario-titulo" style="margin-top:12px;">Un temario construido para aprobar en la GVA</h2>
+          <span class="linea-dorada" style="margin:16px 0 24px;display:block;"></span>
+          <ul class="temario-lista">
+            <li>Derecho Administrativo y Procedimiento</li>
+            <li>Legislación valenciana específica</li>
+            <li>Organización de la Generalitat Valenciana</li>
+            <li>Ingeniería de Proyectos y Dirección de Obras</li>
+            <li>Seguridad Industrial y Normativa</li>
+            <li>Instalaciones Eléctricas y Reglamentos</li>
+            <li>Supuestos prácticos de ingeniería</li>
+          </ul>
+          <a href="temario.html" class="btn btn-secundario" style="margin-top:28px;">Ver temario completo →</a>
+        </div>
+        <div class="temario-info animar">
+          <div class="tarjeta">
+            <h3 style="margin-bottom:16px;">Próxima convocatoria GVA</h3>
+            <p style="margin-bottom:20px;">Las convocatorias de la Generalitat Valenciana se publican periódicamente en
+              el DOGV. Mantente informado y empieza a prepararte con antelación suficiente.</p>
+            <div style="background:var(--azul-claro);border-radius:var(--radio);padding:20px;margin-bottom:20px;">
+              <p style="font-size:0.88rem;color:var(--azul-marino);font-weight:600;margin-bottom:4px;">⏱️ La preparación
+                media es de 12-18 meses</p>
+              <p style="font-size:0.85rem;color:var(--gris-medio);margin:0;">Cuanto antes empieces, más ventaja llevas.
+              </p>
+            </div>
+            <a href="https://wa.me/34633600849?text=Hola,%20quiero%20saber%20si%20hay%20convocatoria%20activa%20para%20ingeniero%20industrial%20GVA"
+              class="btn btn-primario" style="width:100%;justify-content:center;" target="_blank" rel="noopener">
+              Consultar convocatoria activa
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TESTIMONIOS ════════════════════════════════════════ -->
+  <section class="seccion" aria-labelledby="testimonios-titulo">
+    <div class="container">
+      <div class="seccion-header">
+        <span class="etiqueta">Lo que dicen nuestros alumnos</span>
+        <h2 id="testimonios-titulo">Resultados reales</h2>
+        <span class="linea-dorada" aria-hidden="true"></span>
+      </div>
+      <div class="testimonios-grid">
+        <blockquote class="testimonio animar">
+          <p class="testimonio-texto">Lo que más me sorprendió fue la especificidad del temario. En otras academias
+            estudiaba cosas que no entraban en el examen de la GVA. Aquí cada hora de estudio contaba.</p>
+          <footer class="testimonio-autor">
+            <div class="testimonio-avatar" aria-hidden="true">AM</div>
+            <div>
+              <div class="testimonio-nombre">A. Martínez</div>
+              <div class="testimonio-cargo">Ingeniero Industrial · Plaza GVA obtenida</div>
+            </div>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonio animar animar-delay-1">
+          <p class="testimonio-texto">El seguimiento personalizado marcó la diferencia. Sabía exactamente en qué fallaba
+            y cómo corregirlo antes del examen. Con otro preparador, eso no existía.</p>
+          <footer class="testimonio-autor">
+            <div class="testimonio-avatar" aria-hidden="true">CR</div>
+            <div>
+              <div class="testimonio-nombre">C. Roca</div>
+              <div class="testimonio-cargo">Ingeniera Industrial · Plaza GVA obtenida</div>
+            </div>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonio animar animar-delay-2">
+          <p class="testimonio-texto">Empecé desde cero y en 14 meses conseguí la plaza. El método funciona. Los
+            simulacros son muy parecidos al examen real, lo que te quita el miedo escénico completamente.</p>
+          <footer class="testimonio-autor">
+            <div class="testimonio-avatar" aria-hidden="true">JP</div>
+            <div>
+              <div class="testimonio-nombre">J. Peris</div>
+              <div class="testimonio-cargo">Ingeniero Industrial · Plaza GVA obtenida</div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FAQ ══════════════════════════════════════════════════ -->
+  <section class="seccion seccion-gris" aria-labelledby="faq-titulo">
+    <div class="container">
+      <div class="seccion-header">
+        <span class="etiqueta">Preguntas frecuentes</span>
+        <h2 id="faq-titulo">Resolvemos tus dudas</h2>
+        <span class="linea-dorada" aria-hidden="true"></span>
+      </div>
+      <div class="faq-lista">
+        <div class="faq-item">
+          <button class="faq-pregunta" aria-expanded="false">
+            ¿Necesito ser ingeniero industrial titulado para presentarme?
+            <span class="faq-icono" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-respuesta">Sí. Las oposiciones de Ingeniero Industrial de la GVA requieren estar en posesión
+            del título de Ingeniero Industrial (o equivalente reconocido) en el momento de presentar la solicitud. Si
+            estás en el último curso, consúltanos porque los plazos varían.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-pregunta" aria-expanded="false">
+            ¿Cuánto tiempo se tarda en preparar las oposiciones?
+            <span class="faq-icono" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-respuesta">La preparación media oscila entre 12 y 18 meses dependiendo de tu base y tu
+            dedicación diaria. Con una dedicación de 3-4 horas diarias es posible estar listo en 12-14 meses. Te hacemos
+            un plan personalizado en la consulta inicial.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-pregunta" aria-expanded="false">
+            ¿Las clases son presenciales o online?
+            <span class="faq-icono" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-respuesta">Las clases son 100% online en directo. Tienes acceso a la grabación de cada sesión,
+            por lo que si un día no puedes asistir no te pierdes nada. La plataforma permite interacción real con el
+            preparador.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-pregunta" aria-expanded="false">
+            ¿Qué pasa si hay una convocatoria y no he terminado la preparación?
+            <span class="faq-icono" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-respuesta">Te acompañamos en la decisión. En algunos casos presentarse tiene sentido aunque no
+            estés al 100%, para coger experiencia. En otros, es mejor esperar. Lo evaluamos juntos con tiempo
+            suficiente.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-pregunta" aria-expanded="false">
+            ¿Cuándo empieza el próximo grupo?
+            <span class="faq-icono" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-respuesta">Abrimos nuevos grupos periódicamente según demanda. Lo mejor es contactarnos cuanto
+            antes para asegurar tu plaza en el próximo grupo disponible. Las plazas son limitadas (máximo 12 alumnos).
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA FINAL ══════════════════════════════════════════ -->
+  <section class="cta-final" aria-labelledby="cta-titulo">
+    <div class="container">
+      <h2 id="cta-titulo" class="animar">Tu plaza en la GVA empieza con una conversación</h2>
+      <p class="animar animar-delay-1">Cuéntanos tu situación y te decimos honestamente si estás listo para empezar y
+        qué camino seguir.</p>
+      <div class="cta-botones animar animar-delay-2">
+        <a href="https://wa.me/34633600849?text=Hola,%20me%20gustar%C3%ADa%20obtener%20información%20sobre%20la%20preparación%20de%20oposiciones%20de%20ingeniero%20industrial%20GVA"
+          class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          📲 Hablar por WhatsApp
+        </a>
+        <a href="precios.html" class="btn btn-blanco btn-lg">Ver precios y modalidades</a>
+      </div>
+      <p class="cta-nota">Sin compromiso. Primera consulta completamente gratuita.</p>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ═════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo">
+            <span class="logo-siglas">APOI</span>
+            <span class="logo-texto">Academia de Preparación de Oposiciones para Ingenieros</span>
+          </a>
+          <p class="footer-desc">Especialistas en la preparación de oposiciones para Ingeniero Industrial de la
+            Generalitat Valenciana. Metodología probada, temario actualizado y resultados reales.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="temario.html">Temario y programa</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía completa</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/34633600849" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:apoi.ingenieros@gmail.com">apoi.ingenieros@gmail.com</a></li>
+            <li><a href="https://linkedin.com/company/apoi" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 APOI. Todos los derechos reservados.</span>
+        <span>
+          <a href="#">Aviso legal</a> ·
+          <a href="#">Política de privacidad</a> ·
+          <a href="#">Cookies</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ WhatsApp flotante ══════════════════════════════════ -->
+  <a href="https://wa.me/34633600849?text=Hola,%20me%20gustar%C3%ADa%20obtener%20información%20sobre%20las%20oposiciones%20de%20ingeniero%20industrial%20GVA"
+    class="whatsapp-flotante" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.527 5.845L.057 23.547a.5.5 0 0 0 .609.637l5.886-1.545A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.967 0-3.81-.537-5.388-1.473l-.385-.228-3.993 1.048 1.015-3.895-.249-.397A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

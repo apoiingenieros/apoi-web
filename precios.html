@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios — Preparación Oposiciones Ingeniero Industrial GVA | APOI</title>
+  <meta name="description"
+    content="Modalidades y precios de preparación para las oposiciones de Ingeniero Industrial de la GVA. Grupos reducidos, clases individuales y acceso a materiales.">
+  <link rel="canonical" href="https://www.apoi.es/precios.html">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .animar {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .animar.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .page-hero {
+      background: linear-gradient(160deg, #0f2540 0%, #1a3a5c 100%);
+      padding: 140px 0 80px;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      color: var(--blanco);
+      margin-bottom: 16px;
+    }
+
+    .page-hero p {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 1.1rem;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .precios-seccion {
+      padding: 96px 0;
+    }
+
+    .planes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .plan {
+      background: var(--blanco);
+      border: 2px solid var(--borde);
+      border-radius: var(--radio-lg);
+      overflow: hidden;
+      transition: var(--transicion);
+    }
+
+    .plan:hover {
+      box-shadow: var(--sombra-fuerte);
+      transform: translateY(-4px);
+    }
+
+    .plan.destacado {
+      border-color: var(--azul-marino);
+      position: relative;
+    }
+
+    .plan-popular {
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--dorado);
+      color: var(--blanco);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 20px;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .plan-header {
+      padding: 36px 32px 28px;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .plan.destacado .plan-header {
+      background: var(--azul-marino);
+    }
+
+    .plan.destacado .plan-header h3 {
+      color: var(--blanco);
+    }
+
+    .plan.destacado .plan-header p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .plan-header h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .plan-header p {
+      font-size: 0.88rem;
+      margin-bottom: 20px;
+    }
+
+    .plan-precio {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--azul-marino);
+      line-height: 1;
+    }
+
+    .plan.destacado .plan-precio {
+      color: var(--blanco);
+    }
+
+    .plan-precio sub {
+      font-size: 1rem;
+      font-family: var(--font-body);
+      font-weight: 400;
+    }
+
+    .plan-precio span {
+      font-size: 1rem;
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: var(--gris-medio);
+      margin-left: 4px;
+    }
+
+    .plan.destacado .plan-precio span {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .plan-features {
+      padding: 28px 32px;
+    }
+
+    .plan-features ul {
+      list-style: none;
+    }
+
+    .plan-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 9px 0;
+      font-size: 0.9rem;
+      color: var(--gris-oscuro);
+      border-bottom: 1px solid var(--gris-claro);
+    }
+
+    .plan-features li:last-child {
+      border-bottom: none;
+    }
+
+    .plan-features li .check {
+      color: #22c55e;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .plan-features li .no {
+      color: #d1d5db;
+      flex-shrink: 0;
+    }
+
+    .plan-footer {
+      padding: 0 32px 32px;
+    }
+
+    .plan-footer .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .garantia {
+      background: var(--gris-claro);
+      border: 1px solid var(--borde);
+      border-radius: var(--radio-lg);
+      padding: 48px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .garantia h3 {
+      margin-bottom: 12px;
+    }
+
+    .comparativa {
+      padding: 80px 0;
+      background: var(--gris-claro);
+    }
+
+    .tabla-comparativa {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .tabla-comparativa th {
+      background: var(--azul-marino);
+      color: var(--blanco);
+      padding: 14px 20px;
+      text-align: left;
+      font-family: var(--font-body);
+      font-weight: 600;
+    }
+
+    .tabla-comparativa th:first-child {
+      border-radius: 8px 0 0 0;
+    }
+
+    .tabla-comparativa th:last-child {
+      border-radius: 0 8px 0 0;
+    }
+
+    .tabla-comparativa td {
+      padding: 13px 20px;
+      border-bottom: 1px solid var(--borde);
+      background: var(--blanco);
+    }
+
+    .tabla-comparativa tr:hover td {
+      background: var(--azul-claro);
+    }
+
+    .tabla-comparativa td:not(:first-child) {
+      text-align: center;
+    }
+
+    .si {
+      color: #22c55e;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .no {
+      color: #e5e7eb;
+      font-size: 1.1rem;
+    }
+
+    .par {
+      color: var(--dorado);
+      font-weight: 600;
+      font-size: 0.82rem;
+    }
+
+    .faq-precios {
+      padding: 80px 0;
+    }
+
+    .faq-lista {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid var(--borde);
+      border-radius: var(--radio);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .faq-pregunta {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--blanco);
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: .95rem;
+      font-weight: 600;
+      color: var(--azul-marino);
+      text-align: left;
+      transition: var(--transicion);
+    }
+
+    .faq-pregunta:hover {
+      background: var(--gris-claro);
+    }
+
+    .faq-icono {
+      font-size: 1.3rem;
+      color: var(--dorado);
+      transition: transform .3s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.abierto .faq-icono {
+      transform: rotate(45deg);
+    }
+
+    .faq-respuesta {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease, padding .3s;
+      padding: 0 24px;
+      font-size: .92rem;
+      color: var(--gris-medio);
+      line-height: 1.75;
+    }
+
+    .faq-item.abierto .faq-respuesta {
+      max-height: 400px;
+      padding: 0 24px 20px;
+    }
+
+    @media (max-width:900px) {
+      .planes-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-siglas">APOI</span>
+          <span class="logo-texto">Academia de Preparación de Oposiciones para Ingenieros</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="temario.html">Temario</a></li>
+          <li><a href="precios.html" class="activo">Precios</a></li>
+          <li><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <a href="https://wa.me/34633600849?text=Hola,%20me%20gustar%C3%ADa%20obtener%20información%20sobre%20la%20preparación%20de%20oposiciones"
+          class="btn btn-primario nav-cta" target="_blank" rel="noopener">📲 Consulta gratuita</a>
+        <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      </div>
+      <div class="nav-mobile">
+        <a href="index.html">Inicio</a><a href="temario.html">Temario</a>
+        <a href="precios.html">Precios</a><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <h1>Modalidades y precios</h1>
+      <p>Sin letra pequeña. Escoge el formato que mejor encaja con tu situación y tus objetivos.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="precios-seccion">
+      <div class="container">
+        <div class="seccion-header" style="margin-bottom:48px;">
+          <span class="etiqueta">Elige tu plan</span>
+          <h2>Tres formas de prepararte con APOI</h2>
+          <span class="linea-dorada"></span>
+        </div>
+
+        <div class="planes-grid">
+          <!-- Plan Básico -->
+          <article class="plan animar">
+            <div class="plan-header">
+              <h3>Acceso a Materiales</h3>
+              <p>Para opositores con base sólida que necesitan material actualizado y de calidad.</p>
+              <div class="plan-precio">
+                <sub>desde</sub> 200<sub>€</sub>
+                <span>/ mes</span>
+              </div>
+            </div>
+            <div class="plan-features">
+              <ul>
+                <li><span class="check">✓</span> Apuntes completos GVA actualizados</li>
+                <li><span class="check">✓</span> Banco de test con más de 1.500 preguntas</li>
+                <li><span class="check">✓</span> Supuestos prácticos resueltos</li>
+                <li><span class="check">✓</span> Acceso al foro de alumnos</li>
+                <li><span class="check">✓</span> Alertas de convocatoria</li>
+                <li><span class="no">—</span> Clases en directo</li>
+                <li><span class="no">—</span> Corrección de ejercicios</li>
+                <li><span class="no">—</span> Tutor personal</li>
+              </ul>
+            </div>
+            <div class="plan-footer">
+              <a href="https://wa.me/34633600849?text=Hola,%20me%20interesa%20el%20plan%20de%20Acceso%20a%20Materiales"
+                class="btn btn-secundario" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- Plan Grupo -->
+          <article class="plan destacado animar animar-delay-1">
+            <div class="plan-popular">Más elegido</div>
+            <div class="plan-header">
+              <h3>Preparación Completa</h3>
+              <p>El programa completo en grupo reducido. Lo que necesita la mayoría de opositores.</p>
+              <div class="plan-precio">
+                <sub>desde</sub> 250<sub>€</sub>
+                <span>/ mes</span>
+              </div>
+            </div>
+            <div class="plan-features">
+              <ul>
+                <li><span class="check">✓</span> Todo lo del plan Materiales</li>
+                <li><span class="check">✓</span> Clases en directo (3 sesiones/semana)</li>
+                <li><span class="check">✓</span> Grabaciones disponibles 24h</li>
+                <li><span class="check">✓</span> Corrección de tests y supuestos</li>
+                <li><span class="check">✓</span> Simulacros mensuales</li>
+                <li><span class="check">✓</span> Grupo máx. 12 alumnos</li>
+                <li><span class="check">✓</span> Seguimiento de progreso</li>
+                <li><span class="no">—</span> Sesiones individuales con preparador</li>
+              </ul>
+            </div>
+            <div class="plan-footer">
+              <a href="https://wa.me/34633600849?text=Hola,%20me%20interesa%20el%20plan%20de%20Preparación%20Completa"
+                class="btn btn-primario" target="_blank" rel="noopener">Empezar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- Plan Premium -->
+          <article class="plan animar animar-delay-2">
+            <div class="plan-header">
+              <h3>Intensivo Premium</h3>
+              <p>Preparación completa con acceso prioritario a WhatsApp y sesiones de técnicas de estudio.</p>
+              <div class="plan-precio">
+                <sub>desde</sub> 300<sub>€</sub>
+                <span>/ mes</span>
+              </div>
+            </div>
+            <div class="plan-features">
+              <ul>
+                <li><span class="check">✓</span> Todo lo del plan Completo</li>
+                <li><span class="check">✓</span> Sesiones de preparación con técnicas de estudio</li>
+                <li><span class="check">✓</span> Plan de estudio personalizado</li>
+                <li><span class="check">✓</span> Corrección grupal de supuestos escritos</li>
+                <li><span class="check">✓</span> Acceso prioritario a WhatsApp</li>
+                <li><span class="check">✓</span> Informe mensual de progreso</li>
+                <li><span class="check">✓</span> Acceso vitalicio a materiales</li>
+                <li><span class="check">✓</span> Preparación específica del día del examen</li>
+              </ul>
+            </div>
+            <div class="plan-footer">
+              <a href="https://wa.me/34633600849?text=Hola,%20me%20interesa%20el%20plan%20Intensivo%20Premium"
+                class="btn btn-secundario" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="garantia animar">
+          <div style="font-size:2rem;margin-bottom:12px;">🛡️</div>
+          <h3>Compromiso de satisfacción</h3>
+          <p style="max-width:540px;margin:0 auto;">Si en los primeros 15 días no estás satisfecho con el nivel del
+            programa, te devolvemos el importe íntegro del primer mes. Sin preguntas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparativa">
+      <div class="container">
+        <div class="seccion-header" style="margin-bottom:40px;">
+          <span class="etiqueta">Comparativa</span>
+          <h2>¿Qué incluye cada plan?</h2>
+          <span class="linea-dorada"></span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="tabla-comparativa">
+            <thead>
+              <tr>
+                <th style="min-width:220px;">Característica</th>
+                <th style="min-width:140px;">Materiales</th>
+                <th style="min-width:140px;">Completo</th>
+                <th style="min-width:140px;">Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Apuntes y materiales GVA</td>
+                <td><span class="si">✓</span></td>
+                <td><span class="si">✓</span></td>
+                <td><span class="si">✓</span></td>
+              </tr>
+              <tr>
+                <td>Banco de test (+1.500 preguntas)</td>
+                <td><span class="si">✓</span></td>
+                <td><span class="si">✓</span></td>
+                <td><span class="si">✓</span></td>
+              </tr>
+              <tr>
+                <td>Alertas de convocatoria</td>
+                <td><span class="si">✓</span></td>
+                <td><span class="si">✓</span></td>
+                <td><span class="si">✓</span></td>
+              </tr>
+              <tr>
+                <td>Clases en directo (3/sem)</td>
+                <td><span class="no">—</span></td>
+                <td><span class="si">✓</span></td>
+                <td><span class="si">✓</span></td>
+              </tr>
+              <tr>
+                <td>Grabaciones de clases</td>
+                <td><span class="no">—</span></td>
+                <td><span class="si">✓</span></td>
+                <td><span class="si">✓</span></td>
+              </tr>
+              <tr>
+                <td>Simulacros mensuales</td>
+                <td><span class="no">—</span></td>
+                <td><span class="si">✓</span></td>
+                <td><span class="si">✓</span></td>
+              </tr>
+              <tr>
+                <td>Corrección de supuestos</td>
+                <td><span class="no">—</span></td>
+                <td><span class="si">✓</span></td>
+                <td><span class="si">✓</span></td>
+              </tr>
+              <tr>
+                <td>Sesiones de técnicas de estudio</td>
+                <td><span class="no">—</span></td>
+                <td><span class="no">—</span></td>
+                <td><span class="si">✓</span></td>
+              </tr>
+              <tr>
+                <td>Acceso prioritario a WhatsApp</td>
+                <td><span class="no">—</span></td>
+                <td><span class="no">—</span></td>
+                <td><span class="si">✓</span></td>
+              </tr>
+              <tr>
+                <td>Plan de estudio personalizado</td>
+                <td><span class="no">—</span></td>
+                <td><span class="no">—</span></td>
+                <td><span class="si">✓</span></td>
+              </tr>
+              <tr>
+                <td>Acceso vitalicio a materiales</td>
+                <td><span class="no">—</span></td>
+                <td><span class="no">—</span></td>
+                <td><span class="si">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-precios">
+      <div class="container">
+        <div class="seccion-header" style="margin-bottom:40px;">
+          <span class="etiqueta">Preguntas sobre precios</span>
+          <h2>Lo que más nos preguntan</h2>
+          <span class="linea-dorada"></span>
+        </div>
+        <div class="faq-lista">
+          <div class="faq-item">
+            <button class="faq-pregunta" aria-expanded="false">
+              ¿Se puede pagar en cuotas anuales con descuento?
+              <span class="faq-icono">+</span>
+            </button>
+            <div class="faq-respuesta">Sí. El pago anual tiene un descuento equivalente a 2 meses gratuitos respecto al
+              pago mensual. Consúltanos por WhatsApp y te detallamos las opciones.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pregunta" aria-expanded="false">
+              ¿Puedo cambiar de plan una vez empezado?
+              <span class="faq-icono">+</span>
+            </button>
+            <div class="faq-respuesta">Sí, puedes subir de plan en cualquier momento. Solo pagarás la diferencia
+              proporcional del mes en curso. Bajar de plan requiere esperar al inicio del siguiente mes.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pregunta" aria-expanded="false">
+              ¿Hay precio especial si me apunto con un compañero?
+              <span class="faq-icono">+</span>
+            </button>
+            <div class="faq-respuesta">Sí, tenemos un descuento del 10% para inscripciones simultáneas de dos o más
+              personas. Escríbenos y lo gestionamos.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pregunta" aria-expanded="false">
+              ¿Los precios incluyen IVA?
+              <span class="faq-icono">+</span>
+            </button>
+            <div class="faq-respuesta">Los precios mostrados son orientativos. La formación reglada puede estar exenta
+              de IVA. Te facilitamos factura detallada con cada pago.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section style="background:linear-gradient(135deg,#0f2540,#1a3a5c);padding:80px 0;text-align:center;">
+    <div class="container">
+      <h2 style="color:var(--blanco);margin-bottom:14px;">¿Tienes dudas sobre qué plan elegir?</h2>
+      <p style="color:rgba(255,255,255,.7);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">
+        Cuéntanos tu situación y te recomendamos honestamente qué modalidad encaja mejor contigo.</p>
+      <a href="https://wa.me/34633600849?text=Hola,%20quiero%20que%20me%20orientéis%20sobre%20qué%20plan%20es%20mejor%20para%20mí"
+        class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">📲 Hablar con un preparador</a>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo"><span class="logo-siglas">APOI</span><span class="logo-texto">Academia de
+              Preparación de Oposiciones para Ingenieros</span></a>
+          <p class="footer-desc">Especialistas en oposiciones de Ingeniero Industrial de la Generalitat Valenciana.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="temario.html">Temario</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/34633600849" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:apoi.ingenieros@gmail.com">apoi.ingenieros@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 APOI.</span><span><a href="#">Aviso legal</a> · <a
+            href="#">Privacidad</a></span></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/34633600849?text=Hola,%20me%20gustar%C3%ADa%20obtener%20información%20sobre%20las%20oposiciones%20de%20ingeniero%20industrial%20GVA"
+    class="whatsapp-flotante" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.527 5.845L.057 23.547a.5.5 0 0 0 .609.637l5.886-1.545A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.967 0-3.81-.537-5.388-1.473l-.385-.228-3.993 1.048 1.015-3.895-.249-.397A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+    </svg>
+  </a>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
