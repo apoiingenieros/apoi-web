@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Convocatoria Oposiciones Ingeniero Industrial GVA 2026 — 11 plazas | APOI</title>
-  <meta name="description" content="La GVA convoca 11 plazas de Ingeniero Industrial en la OPE 2026 (ORDEN 18/2026, DOGV). Todo sobre el examen, requisitos, temario y cómo prepararte para aprobar.">
-  <meta name="keywords" content="convocatoria ingeniero industrial GVA 2026, oposiciones ingeniero industrial Generalitat Valenciana 2026, OPE 2026 GVA ingenieros, plazas ingeniero industrial Valencia 2026">
-  <link rel="canonical" href="https://www.apoi.es/convocatoria-ingeniero-industrial-gva-2026.html">
+  <meta name="description"
+    content="La GVA convoca 11 plazas de Ingeniero Industrial en la OPE 2026 (ORDEN 18/2026, DOGV). Todo sobre el examen, requisitos, temario y cómo prepararte para aprobar.">
+  <meta name="keywords"
+    content="convocatoria ingeniero industrial GVA 2026, oposiciones ingeniero industrial Generalitat Valenciana 2026, OPE 2026 GVA ingenieros, plazas ingeniero industrial Valencia 2026">
+  <link rel="canonical" href="https://www.apoi-web.pages.dev/convocatoria-ingeniero-industrial-gva-2026.html">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -16,25 +19,35 @@
     "datePublished": "2026-05-10",
     "dateModified": "2026-05-10",
     "author": { "@type": "Organization", "name": "APOI" },
-    "publisher": { "@type": "Organization", "name": "APOI", "url": "https://www.apoi.es" }
+    "publisher": { "@type": "Organization", "name": "APOI", "url": "https://www.apoi-web.pages.dev" }
   }
   </script>
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    .animar { opacity:0; transform:translateY(20px); transition:opacity .5s ease, transform .5s ease; }
-    .animar.visible { opacity:1; transform:none; }
+    .animar {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .animar.visible {
+      opacity: 1;
+      transform: none;
+    }
 
     /* ── Hero artículo ── */
     .articulo-hero {
       background: linear-gradient(160deg, #0f2540 0%, #1a3a5c 100%);
       padding: 140px 0 72px;
     }
+
     .articulo-hero-inner {
       display: grid;
       grid-template-columns: 1fr 320px;
       gap: 56px;
       align-items: start;
     }
+
     .articulo-meta {
       display: flex;
       align-items: center;
@@ -42,35 +55,43 @@
       flex-wrap: wrap;
       margin-bottom: 20px;
     }
+
     .articulo-meta span {
       font-size: 0.78rem;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255, 255, 255, 0.5);
       display: flex;
       align-items: center;
       gap: 5px;
     }
+
     .articulo-hero h1 {
       color: var(--blanco);
       font-size: clamp(1.8rem, 3.5vw, 2.6rem);
       margin-bottom: 18px;
       line-height: 1.25;
     }
-    .articulo-hero h1 span { color: #f5c96a; }
+
+    .articulo-hero h1 span {
+      color: #f5c96a;
+    }
+
     .articulo-hero .intro {
-      color: rgba(255,255,255,0.75);
+      color: rgba(255, 255, 255, 0.75);
       font-size: 1.08rem;
       line-height: 1.75;
       margin-bottom: 28px;
     }
+
     .articulo-tags {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
     }
+
     .articulo-tag {
-      background: rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.7);
-      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 100px;
       padding: 4px 12px;
       font-size: 0.76rem;
@@ -79,12 +100,13 @@
 
     /* ── Ficha lateral hero ── */
     .ficha-hero {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: var(--radio-lg);
       padding: 28px;
       backdrop-filter: blur(8px);
     }
+
     .ficha-hero h3 {
       color: #f5c96a;
       font-size: 0.8rem;
@@ -94,24 +116,47 @@
       font-family: var(--font-body);
       font-weight: 600;
     }
+
     .ficha-dato {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       font-size: 0.87rem;
     }
-    .ficha-dato:last-of-type { border-bottom: none; }
-    .ficha-dato-label { color: rgba(255,255,255,0.55); }
-    .ficha-dato-valor { color: var(--blanco); font-weight: 600; text-align: right; max-width: 55%; }
-    .ficha-dato-valor.destacado { color: #f5c96a; font-size: 1.05rem; }
+
+    .ficha-dato:last-of-type {
+      border-bottom: none;
+    }
+
+    .ficha-dato-label {
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .ficha-dato-valor {
+      color: var(--blanco);
+      font-weight: 600;
+      text-align: right;
+      max-width: 55%;
+    }
+
+    .ficha-dato-valor.destacado {
+      color: #f5c96a;
+      font-size: 1.05rem;
+    }
+
     .ficha-cta {
       margin-top: 20px;
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .ficha-cta .btn { width: 100%; justify-content: center; font-size: 0.9rem; }
+
+    .ficha-cta .btn {
+      width: 100%;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
 
     /* ── Layout artículo ── */
     .articulo-layout {
@@ -129,13 +174,47 @@
       border-top: 1px solid var(--borde);
       scroll-margin-top: 90px;
     }
-    .articulo-body h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
-    .articulo-body h3 { font-size: 1.1rem; margin: 28px 0 12px; color: var(--azul-marino); }
-    .articulo-body p  { font-size: 0.97rem; line-height: 1.85; margin-bottom: 18px; color: var(--gris-oscuro); }
-    .articulo-body ul, .articulo-body ol { padding-left: 24px; margin-bottom: 18px; }
-    .articulo-body li { font-size: 0.95rem; line-height: 1.75; margin-bottom: 8px; color: var(--gris-oscuro); }
-    .articulo-body strong { color: var(--azul-marino); }
-    .articulo-body a { color: var(--azul-medio); text-decoration: underline; }
+
+    .articulo-body h2:first-child {
+      margin-top: 0;
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .articulo-body h3 {
+      font-size: 1.1rem;
+      margin: 28px 0 12px;
+      color: var(--azul-marino);
+    }
+
+    .articulo-body p {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      margin-bottom: 18px;
+      color: var(--gris-oscuro);
+    }
+
+    .articulo-body ul,
+    .articulo-body ol {
+      padding-left: 24px;
+      margin-bottom: 18px;
+    }
+
+    .articulo-body li {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 8px;
+      color: var(--gris-oscuro);
+    }
+
+    .articulo-body strong {
+      color: var(--azul-marino);
+    }
+
+    .articulo-body a {
+      color: var(--azul-medio);
+      text-decoration: underline;
+    }
 
     /* ── Cajas informativas ── */
     .caja-urgencia {
@@ -148,9 +227,25 @@
       gap: 16px;
       align-items: flex-start;
     }
-    .caja-urgencia-icono { font-size: 1.8rem; flex-shrink: 0; line-height: 1; }
-    .caja-urgencia h4 { color: #c2410c; font-size: 1rem; margin-bottom: 6px; }
-    .caja-urgencia p  { color: #7c2d12; font-size: 0.9rem; margin: 0; line-height: 1.6; }
+
+    .caja-urgencia-icono {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .caja-urgencia h4 {
+      color: #c2410c;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .caja-urgencia p {
+      color: #7c2d12;
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.6;
+    }
 
     .caja-info {
       background: var(--azul-claro);
@@ -159,7 +254,13 @@
       padding: 20px 24px;
       margin: 24px 0;
     }
-    .caja-info p { color: var(--azul-marino); font-size: 0.9rem; margin: 0; line-height: 1.65; }
+
+    .caja-info p {
+      color: var(--azul-marino);
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.65;
+    }
 
     .caja-exito {
       background: #f0fdf4;
@@ -168,7 +269,13 @@
       padding: 20px 24px;
       margin: 24px 0;
     }
-    .caja-exito p { color: #14532d; font-size: 0.9rem; margin: 0; line-height: 1.65; }
+
+    .caja-exito p {
+      color: #14532d;
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.65;
+    }
 
     /* ── Tabla examen ── */
     .tabla-examen {
@@ -180,6 +287,7 @@
       overflow: hidden;
       box-shadow: var(--sombra-suave);
     }
+
     .tabla-examen th {
       background: var(--azul-marino);
       color: var(--blanco);
@@ -189,14 +297,21 @@
       font-weight: 600;
       font-size: 0.85rem;
     }
+
     .tabla-examen td {
       padding: 13px 18px;
       border-bottom: 1px solid var(--borde);
       background: var(--blanco);
       vertical-align: top;
     }
-    .tabla-examen tr:last-child td { border-bottom: none; }
-    .tabla-examen tr:hover td { background: var(--gris-claro); }
+
+    .tabla-examen tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tabla-examen tr:hover td {
+      background: var(--gris-claro);
+    }
 
     /* ── Bloque CTA intermedio ── */
     .cta-intermedio {
@@ -206,9 +321,22 @@
       text-align: center;
       margin: 48px 0;
     }
-    .cta-intermedio h3 { color: var(--blanco); margin-bottom: 10px; font-size: 1.3rem; }
-    .cta-intermedio p  { color: rgba(255,255,255,0.72); margin-bottom: 24px; font-size: 0.95rem; }
-    .cta-intermedio .btn { margin: 0 8px 8px; }
+
+    .cta-intermedio h3 {
+      color: var(--blanco);
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .cta-intermedio p {
+      color: rgba(255, 255, 255, 0.72);
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .cta-intermedio .btn {
+      margin: 0 8px 8px;
+    }
 
     /* ── Contador regresivo ── */
     .contador-wrap {
@@ -218,19 +346,25 @@
       text-align: center;
       margin: 28px 0;
     }
+
     .contador-titulo {
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       font-size: 0.8rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       margin-bottom: 16px;
     }
+
     .contador-grid {
       display: flex;
       justify-content: center;
       gap: 16px;
     }
-    .contador-item { text-align: center; }
+
+    .contador-item {
+      text-align: center;
+    }
+
     .contador-numero {
       font-family: var(--font-display);
       font-size: 2.4rem;
@@ -239,22 +373,28 @@
       line-height: 1;
       display: block;
     }
+
     .contador-label {
       font-size: 0.72rem;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255, 255, 255, 0.5);
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-top: 4px;
     }
+
     .contador-sep {
       font-size: 2rem;
-      color: rgba(255,255,255,0.2);
+      color: rgba(255, 255, 255, 0.2);
       align-self: flex-start;
       margin-top: 6px;
     }
 
     /* ── Sidebar ── */
-    .articulo-sidebar { position: sticky; top: 90px; }
+    .articulo-sidebar {
+      position: sticky;
+      top: 90px;
+    }
+
     .sidebar-card {
       background: var(--blanco);
       border: 1px solid var(--borde);
@@ -263,6 +403,7 @@
       margin-bottom: 20px;
       box-shadow: var(--sombra-suave);
     }
+
     .sidebar-card h3 {
       font-size: 0.85rem;
       letter-spacing: 0.08em;
@@ -272,8 +413,16 @@
       font-family: var(--font-body);
       font-weight: 700;
     }
-    .toc-lista { list-style: none; padding: 0; }
-    .toc-lista li { margin-bottom: 2px; }
+
+    .toc-lista {
+      list-style: none;
+      padding: 0;
+    }
+
+    .toc-lista li {
+      margin-bottom: 2px;
+    }
+
     .toc-lista a {
       display: block;
       padding: 7px 10px;
@@ -283,7 +432,12 @@
       transition: var(--transicion);
       text-decoration: none;
     }
-    .toc-lista a:hover { background: var(--gris-claro); color: var(--azul-marino); }
+
+    .toc-lista a:hover {
+      background: var(--gris-claro);
+      color: var(--azul-marino);
+    }
+
     .sidebar-alerta {
       background: #fff7ed;
       border: 1px solid #fed7aa;
@@ -291,8 +445,20 @@
       padding: 20px;
       margin-bottom: 20px;
     }
-    .sidebar-alerta p { font-size: 0.85rem; color: #7c2d12; margin: 0 0 14px; line-height: 1.6; }
-    .sidebar-alerta .btn { width: 100%; justify-content: center; font-size: 0.85rem; }
+
+    .sidebar-alerta p {
+      font-size: 0.85rem;
+      color: #7c2d12;
+      margin: 0 0 14px;
+      line-height: 1.6;
+    }
+
+    .sidebar-alerta .btn {
+      width: 100%;
+      justify-content: center;
+      font-size: 0.85rem;
+    }
+
     .plazas-badge {
       display: flex;
       align-items: center;
@@ -304,6 +470,7 @@
       margin-bottom: 14px;
       gap: 10px;
     }
+
     .plazas-badge-num {
       font-family: var(--font-display);
       font-size: 2rem;
@@ -311,11 +478,25 @@
       color: #f5c96a;
       line-height: 1;
     }
-    .plazas-badge-texto { font-size: 0.82rem; color: rgba(255,255,255,0.75); line-height: 1.3; }
+
+    .plazas-badge-texto {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.3;
+    }
 
     /* ── Artículos relacionados ── */
-    .relacionados { padding: 72px 0; background: var(--gris-claro); }
-    .relacionados-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .relacionados {
+      padding: 72px 0;
+      background: var(--gris-claro);
+    }
+
+    .relacionados-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
     .relacionado-card {
       background: var(--blanco);
       border: 1px solid var(--borde);
@@ -325,7 +506,12 @@
       text-decoration: none;
       display: block;
     }
-    .relacionado-card:hover { box-shadow: var(--sombra-media); transform: translateY(-3px); }
+
+    .relacionado-card:hover {
+      box-shadow: var(--sombra-media);
+      transform: translateY(-3px);
+    }
+
     .relacionado-card .cat {
       font-size: 0.72rem;
       font-weight: 700;
@@ -334,360 +520,457 @@
       color: var(--dorado);
       margin-bottom: 8px;
     }
-    .relacionado-card h4 { font-size: 0.97rem; color: var(--azul-marino); margin-bottom: 8px; line-height: 1.35; }
-    .relacionado-card p  { font-size: 0.84rem; color: var(--gris-medio); margin: 0; }
+
+    .relacionado-card h4 {
+      font-size: 0.97rem;
+      color: var(--azul-marino);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .relacionado-card p {
+      font-size: 0.84rem;
+      color: var(--gris-medio);
+      margin: 0;
+    }
 
     @media (max-width: 1000px) {
-      .articulo-hero-inner { grid-template-columns: 1fr; }
-      .ficha-hero { display: none; }
-      .articulo-layout { grid-template-columns: 1fr; }
-      .articulo-sidebar { position: static; }
-      .relacionados-grid { grid-template-columns: 1fr; }
+      .articulo-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .ficha-hero {
+        display: none;
+      }
+
+      .articulo-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .articulo-sidebar {
+        position: static;
+      }
+
+      .relacionados-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<nav id="navbar">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-siglas">APOI</span>
-        <span class="logo-texto">Academia de Oposiciones · Ingenieros</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="temario.html">Temario</a></li>
-        <li><a href="precios.html">Precios</a></li>
-        <li><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-      <a href="https://wa.me/34XXXXXXXXX" class="btn btn-primario nav-cta" target="_blank" rel="noopener">📲 Consulta gratuita</a>
-      <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-    </div>
-    <div class="nav-mobile">
-      <a href="index.html">Inicio</a><a href="temario.html">Temario</a>
-      <a href="precios.html">Precios</a><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía</a>
-      <a href="contacto.html">Contacto</a>
-    </div>
-  </div>
-</nav>
-
-<!-- ══ HERO ARTÍCULO ══════════════════════════════════════ -->
-<header class="articulo-hero">
-  <div class="container">
-    <div class="articulo-hero-inner">
-      <div>
-        <div class="articulo-meta">
-          <span>🗓️ 10 de mayo de 2026</span>
-          <span>⏱️ 6 min de lectura</span>
-          <span>✍️ Equipo APOI</span>
-        </div>
-        <h1>La GVA convoca <span>11 plazas</span> de Ingeniero Industrial en la OPE 2026 — todo lo que necesitas saber</h1>
-        <p class="intro">
-          La Conselleria de Economía, Hacienda y Administración Pública acaba de publicar la ORDEN 18/2026 en el DOGV. Se convocan 11 plazas de Ingeniero Industrial por turno libre. Te explicamos la estructura del examen, los requisitos y, sobre todo, qué tienes que hacer ahora mismo si quieres una de esas plazas.
-        </p>
-        <div class="articulo-tags">
-          <span class="articulo-tag">Convocatoria 2026</span>
-          <span class="articulo-tag">Ingeniero Industrial</span>
-          <span class="articulo-tag">GVA</span>
-          <span class="articulo-tag">OPE 2026</span>
-          <span class="articulo-tag">Subgrupo A1</span>
-        </div>
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-siglas">APOI</span>
+          <span class="logo-texto">Academia de Oposiciones · Ingenieros</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="temario.html">Temario</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <a href="https://wa.me/34XXXXXXXXX" class="btn btn-primario nav-cta" target="_blank" rel="noopener">📲 Consulta
+          gratuita</a>
+        <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
       </div>
-
-      <aside class="ficha-hero" aria-label="Ficha convocatoria">
-        <h3>📋 Ficha de la convocatoria</h3>
-        <div class="ficha-dato">
-          <span class="ficha-dato-label">Orden</span>
-          <span class="ficha-dato-valor">ORDEN 18/2026</span>
-        </div>
-        <div class="ficha-dato">
-          <span class="ficha-dato-label">Fecha publicación</span>
-          <span class="ficha-dato-valor">27 de abril de 2026</span>
-        </div>
-        <div class="ficha-dato">
-          <span class="ficha-dato-label">Plazas</span>
-          <span class="ficha-dato-valor destacado">11 plazas</span>
-        </div>
-        <div class="ficha-dato">
-          <span class="ficha-dato-label">Reserva discapacidad</span>
-          <span class="ficha-dato-valor">1 plaza</span>
-        </div>
-        <div class="ficha-dato">
-          <span class="ficha-dato-label">Turno</span>
-          <span class="ficha-dato-valor">Libre</span>
-        </div>
-        <div class="ficha-dato">
-          <span class="ficha-dato-label">Cuerpo</span>
-          <span class="ficha-dato-valor">A1-04-04</span>
-        </div>
-        <div class="ficha-dato">
-          <span class="ficha-dato-label">Sistema</span>
-          <span class="ficha-dato-valor">Oposición</span>
-        </div>
-        <div class="ficha-dato">
-          <span class="ficha-dato-label">Titulación</span>
-          <span class="ficha-dato-valor">Ing. Industrial o Grado + Máster habilitante</span>
-        </div>
-        <div class="ficha-cta">
-          <a href="https://wa.me/34XXXXXXXXX?text=Hola,%20he%20visto%20la%20convocatoria%20de%202026%20y%20quiero%20información"
-             class="btn btn-whatsapp" target="_blank" rel="noopener">📲 Quiero prepararme</a>
-        </div>
-      </aside>
+      <div class="nav-mobile">
+        <a href="index.html">Inicio</a><a href="temario.html">Temario</a>
+        <a href="precios.html">Precios</a><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
     </div>
-  </div>
-</header>
+  </nav>
 
-<!-- ══ CUERPO DEL ARTÍCULO ════════════════════════════════ -->
-<main>
-  <div class="container">
-    <div class="articulo-layout">
-
-      <article class="articulo-body">
-
-        <div class="caja-urgencia">
-          <div class="caja-urgencia-icono">⚡</div>
-          <div>
-            <h4>El plazo de solicitudes ya está en marcha</h4>
-            <p>La convocatoria se publicó el 27 de abril. El plazo para presentar la solicitud es de <strong>10 días hábiles</strong> desde esa fecha. Si aún no te has inscrito, comprueba si el plazo sigue abierto en el DOGV. Para la preparación del examen en sí, el tiempo que empieces a estudiar hoy es tiempo ganado.</p>
+  <!-- ══ HERO ARTÍCULO ══════════════════════════════════════ -->
+  <header class="articulo-hero">
+    <div class="container">
+      <div class="articulo-hero-inner">
+        <div>
+          <div class="articulo-meta">
+            <span>🗓️ 10 de mayo de 2026</span>
+            <span>⏱️ 6 min de lectura</span>
+            <span>✍️ Equipo APOI</span>
+          </div>
+          <h1>La GVA convoca <span>11 plazas</span> de Ingeniero Industrial en la OPE 2026 — todo lo que necesitas saber
+          </h1>
+          <p class="intro">
+            La Conselleria de Economía, Hacienda y Administración Pública acaba de publicar la ORDEN 18/2026 en el DOGV.
+            Se convocan 11 plazas de Ingeniero Industrial por turno libre. Te explicamos la estructura del examen, los
+            requisitos y, sobre todo, qué tienes que hacer ahora mismo si quieres una de esas plazas.
+          </p>
+          <div class="articulo-tags">
+            <span class="articulo-tag">Convocatoria 2026</span>
+            <span class="articulo-tag">Ingeniero Industrial</span>
+            <span class="articulo-tag">GVA</span>
+            <span class="articulo-tag">OPE 2026</span>
+            <span class="articulo-tag">Subgrupo A1</span>
           </div>
         </div>
 
-        <h2 id="que-se-convoca">¿Qué se convoca exactamente?</h2>
-        <p>La <strong>ORDEN 18/2026, de 27 de abril</strong>, de la Conselleria de Economía, Hacienda y Administración Pública, convoca pruebas selectivas para acceder al <strong>Cuerpo Superior Facultativo, Escala Ingeniería Industrial (A1-04-04)</strong> de la Administración de la Generalitat Valenciana.</p>
-        <p>En total se ofertan <strong>11 plazas por turno libre</strong>, más 1 plaza reservada para personas con discapacidad general. Es la convocatoria más amplia de los últimos años para esta escala, enmarcada en la Oferta Pública de Empleo 2026 aprobada por el Decreto 16/2026.</p>
-
-        <div class="caja-info">
-          <p>📌 <strong>Referencia oficial:</strong> Decreto 16/2026, de 9 de febrero, del Consell, de aprobación de la OPE 2026. La convocatoria específica de Ingeniería Industrial es la <strong>7/26</strong> del Anexo I de la ORDEN 18/2026.</p>
-        </div>
-
-        <h2 id="requisitos">Requisitos para presentarse</h2>
-        <p>Para poder participar en este proceso selectivo debes cumplir los siguientes requisitos <strong>antes de que finalice el plazo de solicitudes</strong>:</p>
-        <ul>
-          <li><strong>Nacionalidad:</strong> española o de un Estado miembro de la UE, o de un estado con libertad de circulación de trabajadores.</li>
-          <li><strong>Edad:</strong> tener cumplidos 16 años y no haber alcanzado la edad de jubilación.</li>
-          <li><strong>Titulación:</strong> estar en posesión del título de <strong>Ingeniero Industrial</strong>, o bien de un <strong>Grado más Máster que habilite para el ejercicio de la profesión de Ingeniería Industrial</strong>.</li>
-          <li><strong>Habilitación:</strong> no haber sido separado mediante expediente disciplinario de ninguna Administración Pública ni estar inhabilitado por sentencia firme.</li>
-        </ul>
-        <div class="caja-exito">
-          <p>✅ <strong>¿Estás acabando el máster?</strong> Puedes presentarte si tienes cumplidas las condiciones para obtener el título en el momento en que finaliza el plazo de solicitudes, siempre que lo mantengas durante todo el proceso selectivo hasta la toma de posesión.</p>
-        </div>
-
-        <h2 id="estructura-examen">Cómo es el examen: estructura completa</h2>
-        <p>El proceso selectivo consta de <strong>una única fase de oposición con dos ejercicios</strong>, ambos de carácter obligatorio.</p>
-
-        <table class="tabla-examen">
-          <thead>
-            <tr>
-              <th>Ejercicio</th>
-              <th>Formato</th>
-              <th>Preguntas</th>
-              <th>Puntuación</th>
-              <th>¿Eliminatorio?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>1º Ejercicio</strong></td>
-              <td>Test teórico sobre el temario específico (Anexo IV)</td>
-              <td>100 preguntas · 4 opciones · 1 correcta</td>
-              <td>0 a 30 puntos<br><em>Mínimo: 15 puntos</em></td>
-              <td>✅ Sí</td>
-            </tr>
-            <tr>
-              <td><strong>2º Ejercicio<br>Parte 1</strong></td>
-              <td>Test teórico-práctico sobre la parte especial (Anexo IV)</td>
-              <td>30 preguntas · 4 opciones · 1 correcta</td>
-              <td>0 a 30 puntos<br><em>Mínimo para superar el ejercicio</em></td>
-              <td>✅ Sí</td>
-            </tr>
-            <tr>
-              <td><strong>2º Ejercicio<br>Parte 2</strong></td>
-              <td>Test teórico sobre la parte general (común a todas las convocatorias)</td>
-              <td>30 preguntas · 4 opciones · 1 correcta</td>
-              <td>0 a 30 puntos</td>
-              <td>❌ No</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3>Sistema de puntuación y penalizaciones</h3>
-        <p>Este es uno de los puntos más importantes para preparar la estrategia de examen:</p>
-        <ul>
-          <li><strong>Respuesta correcta:</strong> suma puntos según el valor de cada pregunta.</li>
-          <li><strong>Respuesta incorrecta:</strong> penaliza con <strong>1/3 del valor de una respuesta correcta</strong>.</li>
-          <li><strong>Respuesta en blanco:</strong> ni suma ni resta — es tu aliado cuando tienes dudas.</li>
-        </ul>
-        <p>La nota final es la suma de las puntuaciones de los dos ejercicios. En caso de empate, se resuelve a favor de quien tenga mayor puntuación en el primer ejercicio; si persiste, a favor de la mayor puntuación en la primera parte del segundo ejercicio.</p>
-
-        <div class="cta-intermedio">
-          <h3>¿Sabes qué temas entran en el examen?</h3>
-          <p>En APOI tenemos el temario completo organizado por bloques, con apuntes propios adaptados al Anexo IV de esta convocatoria.</p>
-          <a href="temario.html" class="btn btn-blanco">Ver temario completo</a>
-          <a href="https://wa.me/34XXXXXXXXX?text=Quiero%20información%20sobre%20el%20temario%20de%20la%20convocatoria%202026"
-             class="btn btn-whatsapp" target="_blank" rel="noopener">📲 Preguntar por WhatsApp</a>
-        </div>
-
-        <h2 id="como-inscribirse">Cómo inscribirse</h2>
-        <p>La presentación de solicitudes es <strong>exclusivamente electrónica</strong>. Para inscribirte necesitas:</p>
-        <ol>
-          <li>Disponer de <strong>Cl@ve, certificado digital o DNIe</strong> para la identificación electrónica.</li>
-          <li>Acceder al formulario oficial de la GVA: <a href="https://breu.gva.es/b/6BLqC4" target="_blank" rel="noopener">https://breu.gva.es/b/6BLqC4</a> → seleccionar la convocatoria 7/26 y pulsar «tramitar».</li>
-          <li>Completar el formulario y realizar el <strong>pago telemático de la tasa</strong>.</li>
-          <li>Registrar electrónicamente la solicitud. <em>Sin registro electrónico, la solicitud no se considera presentada aunque hayas pagado la tasa.</em></li>
-        </ol>
-        <div class="caja-urgencia">
-          <div class="caja-urgencia-icono">⚠️</div>
-          <div>
-            <h4>Importante: pago y registro son dos pasos distintos</h4>
-            <p>Haber abonado la tasa no equivale a haberse inscrito. Es imprescindible completar también el registro electrónico de la solicitud. Muchos aspirantes pierden la oportunidad por no completar este segundo paso.</p>
+        <aside class="ficha-hero" aria-label="Ficha convocatoria">
+          <h3>📋 Ficha de la convocatoria</h3>
+          <div class="ficha-dato">
+            <span class="ficha-dato-label">Orden</span>
+            <span class="ficha-dato-valor">ORDEN 18/2026</span>
           </div>
-        </div>
+          <div class="ficha-dato">
+            <span class="ficha-dato-label">Fecha publicación</span>
+            <span class="ficha-dato-valor">27 de abril de 2026</span>
+          </div>
+          <div class="ficha-dato">
+            <span class="ficha-dato-label">Plazas</span>
+            <span class="ficha-dato-valor destacado">11 plazas</span>
+          </div>
+          <div class="ficha-dato">
+            <span class="ficha-dato-label">Reserva discapacidad</span>
+            <span class="ficha-dato-valor">1 plaza</span>
+          </div>
+          <div class="ficha-dato">
+            <span class="ficha-dato-label">Turno</span>
+            <span class="ficha-dato-valor">Libre</span>
+          </div>
+          <div class="ficha-dato">
+            <span class="ficha-dato-label">Cuerpo</span>
+            <span class="ficha-dato-valor">A1-04-04</span>
+          </div>
+          <div class="ficha-dato">
+            <span class="ficha-dato-label">Sistema</span>
+            <span class="ficha-dato-valor">Oposición</span>
+          </div>
+          <div class="ficha-dato">
+            <span class="ficha-dato-label">Titulación</span>
+            <span class="ficha-dato-valor">Ing. Industrial o Grado + Máster habilitante</span>
+          </div>
+          <div class="ficha-cta">
+            <a href="https://wa.me/34XXXXXXXXX?text=Hola,%20he%20visto%20la%20convocatoria%20de%202026%20y%20quiero%20información"
+              class="btn btn-whatsapp" target="_blank" rel="noopener">📲 Quiero prepararme</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
 
-        <h2 id="exencion-tasas">Exención de tasas</h2>
-        <p>Están <strong>exentas del pago de la tasa</strong> las personas que acrediten un grado de discapacidad igual o superior al 33%. Esta exención se aplica automáticamente al marcar la casilla correspondiente en la solicitud.</p>
+  <!-- ══ CUERPO DEL ARTÍCULO ════════════════════════════════ -->
+  <main>
+    <div class="container">
+      <div class="articulo-layout">
 
-        <h2 id="que-estudiar">¿Qué hay que estudiar? El temario clave</h2>
-        <p>El temario del Anexo IV de la convocatoria 7/26 está dividido en una <strong>parte general</strong> (común a todas las convocatorias del subgrupo A1) y una <strong>parte especial</strong> (específica de Ingeniería Industrial). Los grandes bloques son:</p>
-        <ul>
-          <li><strong>Parte general:</strong> Derecho Administrativo, organización de la GVA, función pública valenciana, procedimiento administrativo, contratación pública, legislación valenciana.</li>
-          <li><strong>Parte especial:</strong> Ingeniería de Proyectos, seguridad industrial, instalaciones eléctricas (REBT), instalaciones térmicas (RITE), reglamentos de gases y aparatos a presión, medio ambiente, actividades clasificadas, normativa valenciana sectorial.</li>
-        </ul>
-        <p>La parte general representa aproximadamente el <strong>30% del examen</strong> y es donde muchos ingenieros fallan por no darle suficiente importancia. No cometas ese error.</p>
+        <article class="articulo-body">
 
-        <h2 id="cuanto-tiempo">¿Cuánto tiempo queda para prepararse?</h2>
-        <p>La convocatoria prevé que el proceso finalice en un plazo máximo de un año desde la publicación. Eso significa que el examen se celebrará <strong>antes de abril de 2027</strong>. Con meses por delante, quien empiece a prepararse ahora tiene una ventaja real sobre quienes esperen.</p>
-
-        <div class="contador-wrap">
-          <div class="contador-titulo">⏳ Tiempo estimado hasta el examen</div>
-          <div class="contador-grid">
-            <div class="contador-item">
-              <span class="contador-numero" id="cnt-meses">~10</span>
-              <div class="contador-label">meses</div>
-            </div>
-            <div class="contador-sep">:</div>
-            <div class="contador-item">
-              <span class="contador-numero">~300</span>
-              <div class="contador-label">horas de estudio necesarias</div>
-            </div>
-            <div class="contador-sep">·</div>
-            <div class="contador-item">
-              <span class="contador-numero">11</span>
-              <div class="contador-label">plazas en juego</div>
+          <div class="caja-urgencia">
+            <div class="caja-urgencia-icono">⚡</div>
+            <div>
+              <h4>El plazo de solicitudes ya está en marcha</h4>
+              <p>La convocatoria se publicó el 27 de abril. El plazo para presentar la solicitud es de <strong>10 días
+                  hábiles</strong> desde esa fecha. Si aún no te has inscrito, comprueba si el plazo sigue abierto en el
+                DOGV. Para la preparación del examen en sí, el tiempo que empieces a estudiar hoy es tiempo ganado.</p>
             </div>
           </div>
-        </div>
 
-        <h2 id="conclusion">Conclusión: ¿merece la pena presentarse?</h2>
-        <p>La respuesta es sí, y hay razones sólidas para ello. Primero, <strong>11 plazas</strong> es un número generoso para este cuerpo — es una de las convocatorias con más plazas de los últimos años. Segundo, las condiciones de un funcionario A1 de la GVA (estabilidad, salario, conciliación) siguen siendo muy competitivas frente al sector privado para un ingeniero industrial.</p>
-        <p>El único riesgo real es prepararse mal o tarde. El examen es exigente, la competencia es alta y el temario es amplio. Con una preparación bien estructurada y material específico para la GVA, las probabilidades de éxito aumentan significativamente.</p>
+          <h2 id="que-se-convoca">¿Qué se convoca exactamente?</h2>
+          <p>La <strong>ORDEN 18/2026, de 27 de abril</strong>, de la Conselleria de Economía, Hacienda y Administración
+            Pública, convoca pruebas selectivas para acceder al <strong>Cuerpo Superior Facultativo, Escala Ingeniería
+              Industrial (A1-04-04)</strong> de la Administración de la Generalitat Valenciana.</p>
+          <p>En total se ofertan <strong>11 plazas por turno libre</strong>, más 1 plaza reservada para personas con
+            discapacidad general. Es la convocatoria más amplia de los últimos años para esta escala, enmarcada en la
+            Oferta Pública de Empleo 2026 aprobada por el Decreto 16/2026.</p>
 
-        <div class="cta-intermedio">
-          <h3>¿Quieres una plaza en esta convocatoria?</h3>
-          <p>En APOI llevamos años preparando ingenieros industriales para la GVA. Cuéntanos tu situación y te decimos qué plan tiene más sentido para ti.</p>
-          <a href="https://wa.me/34XXXXXXXXX?text=He%20visto%20la%20convocatoria%202026%20de%20ingeniero%20industrial%20y%20quiero%20prepararme"
-             class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">📲 Consulta gratuita por WhatsApp</a>
-          <a href="precios.html" class="btn btn-blanco btn-lg">Ver planes y precios</a>
-        </div>
-
-      </article>
-
-      <!-- ══ SIDEBAR ══ -->
-      <aside class="articulo-sidebar">
-
-        <div class="sidebar-alerta">
-          <div class="plazas-badge">
-            <div class="plazas-badge-num">11</div>
-            <div class="plazas-badge-texto">plazas convocadas<br>turno libre · A1-04-04</div>
+          <div class="caja-info">
+            <p>📌 <strong>Referencia oficial:</strong> Decreto 16/2026, de 9 de febrero, del Consell, de aprobación de
+              la OPE 2026. La convocatoria específica de Ingeniería Industrial es la <strong>7/26</strong> del Anexo I
+              de la ORDEN 18/2026.</p>
           </div>
-          <p>El proceso debe finalizar antes de abril de 2027. Cada mes que esperas es tiempo de preparación que pierdes.</p>
-          <a href="https://wa.me/34XXXXXXXXX?text=Quiero%20prepararme%20para%20la%20convocatoria%20de%20ingeniero%20industrial%20GVA%202026"
-             class="btn btn-whatsapp" target="_blank" rel="noopener">📲 Empezar ahora</a>
-        </div>
 
-        <div class="sidebar-card">
-          <h3>📑 Índice del artículo</h3>
-          <ul class="toc-lista">
-            <li><a href="#que-se-convoca">¿Qué se convoca?</a></li>
-            <li><a href="#requisitos">Requisitos</a></li>
-            <li><a href="#estructura-examen">Estructura del examen</a></li>
-            <li><a href="#como-inscribirse">Cómo inscribirse</a></li>
-            <li><a href="#exencion-tasas">Exención de tasas</a></li>
-            <li><a href="#que-estudiar">Qué estudiar</a></li>
-            <li><a href="#cuanto-tiempo">Tiempo de preparación</a></li>
-            <li><a href="#conclusion">Conclusión</a></li>
+          <h2 id="requisitos">Requisitos para presentarse</h2>
+          <p>Para poder participar en este proceso selectivo debes cumplir los siguientes requisitos <strong>antes de
+              que finalice el plazo de solicitudes</strong>:</p>
+          <ul>
+            <li><strong>Nacionalidad:</strong> española o de un Estado miembro de la UE, o de un estado con libertad de
+              circulación de trabajadores.</li>
+            <li><strong>Edad:</strong> tener cumplidos 16 años y no haber alcanzado la edad de jubilación.</li>
+            <li><strong>Titulación:</strong> estar en posesión del título de <strong>Ingeniero Industrial</strong>, o
+              bien de un <strong>Grado más Máster que habilite para el ejercicio de la profesión de Ingeniería
+                Industrial</strong>.</li>
+            <li><strong>Habilitación:</strong> no haber sido separado mediante expediente disciplinario de ninguna
+              Administración Pública ni estar inhabilitado por sentencia firme.</li>
           </ul>
-        </div>
+          <div class="caja-exito">
+            <p>✅ <strong>¿Estás acabando el máster?</strong> Puedes presentarte si tienes cumplidas las condiciones para
+              obtener el título en el momento en que finaliza el plazo de solicitudes, siempre que lo mantengas durante
+              todo el proceso selectivo hasta la toma de posesión.</p>
+          </div>
 
-        <div class="sidebar-card">
-          <h3>🔗 Artículos relacionados</h3>
-          <ul class="toc-lista">
-            <li><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía completa de la oposición</a></li>
-            <li><a href="temario.html">Temario oficial GVA</a></li>
-            <li><a href="precios.html">Modalidades de preparación</a></li>
+          <h2 id="estructura-examen">Cómo es el examen: estructura completa</h2>
+          <p>El proceso selectivo consta de <strong>una única fase de oposición con dos ejercicios</strong>, ambos de
+            carácter obligatorio.</p>
+
+          <table class="tabla-examen">
+            <thead>
+              <tr>
+                <th>Ejercicio</th>
+                <th>Formato</th>
+                <th>Preguntas</th>
+                <th>Puntuación</th>
+                <th>¿Eliminatorio?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1º Ejercicio</strong></td>
+                <td>Test teórico sobre el temario específico (Anexo IV)</td>
+                <td>100 preguntas · 4 opciones · 1 correcta</td>
+                <td>0 a 30 puntos<br><em>Mínimo: 15 puntos</em></td>
+                <td>✅ Sí</td>
+              </tr>
+              <tr>
+                <td><strong>2º Ejercicio<br>Parte 1</strong></td>
+                <td>Test teórico-práctico sobre la parte especial (Anexo IV)</td>
+                <td>30 preguntas · 4 opciones · 1 correcta</td>
+                <td>0 a 30 puntos<br><em>Mínimo para superar el ejercicio</em></td>
+                <td>✅ Sí</td>
+              </tr>
+              <tr>
+                <td><strong>2º Ejercicio<br>Parte 2</strong></td>
+                <td>Test teórico sobre la parte general (común a todas las convocatorias)</td>
+                <td>30 preguntas · 4 opciones · 1 correcta</td>
+                <td>0 a 30 puntos</td>
+                <td>❌ No</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Sistema de puntuación y penalizaciones</h3>
+          <p>Este es uno de los puntos más importantes para preparar la estrategia de examen:</p>
+          <ul>
+            <li><strong>Respuesta correcta:</strong> suma puntos según el valor de cada pregunta.</li>
+            <li><strong>Respuesta incorrecta:</strong> penaliza con <strong>1/3 del valor de una respuesta
+                correcta</strong>.</li>
+            <li><strong>Respuesta en blanco:</strong> ni suma ni resta — es tu aliado cuando tienes dudas.</li>
           </ul>
-        </div>
+          <p>La nota final es la suma de las puntuaciones de los dos ejercicios. En caso de empate, se resuelve a favor
+            de quien tenga mayor puntuación en el primer ejercicio; si persiste, a favor de la mayor puntuación en la
+            primera parte del segundo ejercicio.</p>
 
-        <div class="sidebar-card">
-          <h3>📎 Enlace oficial</h3>
-          <p style="font-size:0.85rem;color:var(--gris-medio);margin-bottom:12px;">Consulta la convocatoria completa en el DOGV oficial de la Generalitat Valenciana.</p>
-          <a href="https://www.dogv.gva.es" target="_blank" rel="noopener"
-             class="btn btn-secundario" style="width:100%;justify-content:center;font-size:0.85rem;">
-            Ir al DOGV →
+          <div class="cta-intermedio">
+            <h3>¿Sabes qué temas entran en el examen?</h3>
+            <p>En APOI tenemos el temario completo organizado por bloques, con apuntes propios adaptados al Anexo IV de
+              esta convocatoria.</p>
+            <a href="temario.html" class="btn btn-blanco">Ver temario completo</a>
+            <a href="https://wa.me/34XXXXXXXXX?text=Quiero%20información%20sobre%20el%20temario%20de%20la%20convocatoria%202026"
+              class="btn btn-whatsapp" target="_blank" rel="noopener">📲 Preguntar por WhatsApp</a>
+          </div>
+
+          <h2 id="como-inscribirse">Cómo inscribirse</h2>
+          <p>La presentación de solicitudes es <strong>exclusivamente electrónica</strong>. Para inscribirte necesitas:
+          </p>
+          <ol>
+            <li>Disponer de <strong>Cl@ve, certificado digital o DNIe</strong> para la identificación electrónica.</li>
+            <li>Acceder al formulario oficial de la GVA: <a href="https://breu.gva.es/b/6BLqC4" target="_blank"
+                rel="noopener">https://breu.gva.es/b/6BLqC4</a> → seleccionar la convocatoria 7/26 y pulsar «tramitar».
+            </li>
+            <li>Completar el formulario y realizar el <strong>pago telemático de la tasa</strong>.</li>
+            <li>Registrar electrónicamente la solicitud. <em>Sin registro electrónico, la solicitud no se considera
+                presentada aunque hayas pagado la tasa.</em></li>
+          </ol>
+          <div class="caja-urgencia">
+            <div class="caja-urgencia-icono">⚠️</div>
+            <div>
+              <h4>Importante: pago y registro son dos pasos distintos</h4>
+              <p>Haber abonado la tasa no equivale a haberse inscrito. Es imprescindible completar también el registro
+                electrónico de la solicitud. Muchos aspirantes pierden la oportunidad por no completar este segundo
+                paso.</p>
+            </div>
+          </div>
+
+          <h2 id="exencion-tasas">Exención de tasas</h2>
+          <p>Están <strong>exentas del pago de la tasa</strong> las personas que acrediten un grado de discapacidad
+            igual o superior al 33%. Esta exención se aplica automáticamente al marcar la casilla correspondiente en la
+            solicitud.</p>
+
+          <h2 id="que-estudiar">¿Qué hay que estudiar? El temario clave</h2>
+          <p>El temario del Anexo IV de la convocatoria 7/26 está dividido en una <strong>parte general</strong> (común
+            a todas las convocatorias del subgrupo A1) y una <strong>parte especial</strong> (específica de Ingeniería
+            Industrial). Los grandes bloques son:</p>
+          <ul>
+            <li><strong>Parte general:</strong> Derecho Administrativo, organización de la GVA, función pública
+              valenciana, procedimiento administrativo, contratación pública, legislación valenciana.</li>
+            <li><strong>Parte especial:</strong> Ingeniería de Proyectos, seguridad industrial, instalaciones eléctricas
+              (REBT), instalaciones térmicas (RITE), reglamentos de gases y aparatos a presión, medio ambiente,
+              actividades clasificadas, normativa valenciana sectorial.</li>
+          </ul>
+          <p>La parte general representa aproximadamente el <strong>30% del examen</strong> y es donde muchos ingenieros
+            fallan por no darle suficiente importancia. No cometas ese error.</p>
+
+          <h2 id="cuanto-tiempo">¿Cuánto tiempo queda para prepararse?</h2>
+          <p>La convocatoria prevé que el proceso finalice en un plazo máximo de un año desde la publicación. Eso
+            significa que el examen se celebrará <strong>antes de abril de 2027</strong>. Con meses por delante, quien
+            empiece a prepararse ahora tiene una ventaja real sobre quienes esperen.</p>
+
+          <div class="contador-wrap">
+            <div class="contador-titulo">⏳ Tiempo estimado hasta el examen</div>
+            <div class="contador-grid">
+              <div class="contador-item">
+                <span class="contador-numero" id="cnt-meses">~10</span>
+                <div class="contador-label">meses</div>
+              </div>
+              <div class="contador-sep">:</div>
+              <div class="contador-item">
+                <span class="contador-numero">~300</span>
+                <div class="contador-label">horas de estudio necesarias</div>
+              </div>
+              <div class="contador-sep">·</div>
+              <div class="contador-item">
+                <span class="contador-numero">11</span>
+                <div class="contador-label">plazas en juego</div>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="conclusion">Conclusión: ¿merece la pena presentarse?</h2>
+          <p>La respuesta es sí, y hay razones sólidas para ello. Primero, <strong>11 plazas</strong> es un número
+            generoso para este cuerpo — es una de las convocatorias con más plazas de los últimos años. Segundo, las
+            condiciones de un funcionario A1 de la GVA (estabilidad, salario, conciliación) siguen siendo muy
+            competitivas frente al sector privado para un ingeniero industrial.</p>
+          <p>El único riesgo real es prepararse mal o tarde. El examen es exigente, la competencia es alta y el temario
+            es amplio. Con una preparación bien estructurada y material específico para la GVA, las probabilidades de
+            éxito aumentan significativamente.</p>
+
+          <div class="cta-intermedio">
+            <h3>¿Quieres una plaza en esta convocatoria?</h3>
+            <p>En APOI llevamos años preparando ingenieros industriales para la GVA. Cuéntanos tu situación y te decimos
+              qué plan tiene más sentido para ti.</p>
+            <a href="https://wa.me/34XXXXXXXXX?text=He%20visto%20la%20convocatoria%202026%20de%20ingeniero%20industrial%20y%20quiero%20prepararme"
+              class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">📲 Consulta gratuita por WhatsApp</a>
+            <a href="precios.html" class="btn btn-blanco btn-lg">Ver planes y precios</a>
+          </div>
+
+        </article>
+
+        <!-- ══ SIDEBAR ══ -->
+        <aside class="articulo-sidebar">
+
+          <div class="sidebar-alerta">
+            <div class="plazas-badge">
+              <div class="plazas-badge-num">11</div>
+              <div class="plazas-badge-texto">plazas convocadas<br>turno libre · A1-04-04</div>
+            </div>
+            <p>El proceso debe finalizar antes de abril de 2027. Cada mes que esperas es tiempo de preparación que
+              pierdes.</p>
+            <a href="https://wa.me/34XXXXXXXXX?text=Quiero%20prepararme%20para%20la%20convocatoria%20de%20ingeniero%20industrial%20GVA%202026"
+              class="btn btn-whatsapp" target="_blank" rel="noopener">📲 Empezar ahora</a>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>📑 Índice del artículo</h3>
+            <ul class="toc-lista">
+              <li><a href="#que-se-convoca">¿Qué se convoca?</a></li>
+              <li><a href="#requisitos">Requisitos</a></li>
+              <li><a href="#estructura-examen">Estructura del examen</a></li>
+              <li><a href="#como-inscribirse">Cómo inscribirse</a></li>
+              <li><a href="#exencion-tasas">Exención de tasas</a></li>
+              <li><a href="#que-estudiar">Qué estudiar</a></li>
+              <li><a href="#cuanto-tiempo">Tiempo de preparación</a></li>
+              <li><a href="#conclusion">Conclusión</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>🔗 Artículos relacionados</h3>
+            <ul class="toc-lista">
+              <li><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía completa de la oposición</a></li>
+              <li><a href="temario.html">Temario oficial GVA</a></li>
+              <li><a href="precios.html">Modalidades de preparación</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>📎 Enlace oficial</h3>
+            <p style="font-size:0.85rem;color:var(--gris-medio);margin-bottom:12px;">Consulta la convocatoria completa
+              en el DOGV oficial de la Generalitat Valenciana.</p>
+            <a href="https://www.dogv.gva.es" target="_blank" rel="noopener" class="btn btn-secundario"
+              style="width:100%;justify-content:center;font-size:0.85rem;">
+              Ir al DOGV →
+            </a>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+
+    <!-- ══ ARTÍCULOS RELACIONADOS ══════════════════════════ -->
+    <section class="relacionados">
+      <div class="container">
+        <div class="seccion-header" style="margin-bottom:36px;">
+          <span class="etiqueta">Sigue leyendo</span>
+          <h2>Más recursos para prepararte</h2>
+          <span class="linea-dorada"></span>
+        </div>
+        <div class="relacionados-grid">
+          <a href="guia-oposiciones-ingeniero-industrial-gva.html" class="relacionado-card">
+            <div class="cat">Guía</div>
+            <h4>Oposiciones Ingeniero Industrial GVA: la guía completa</h4>
+            <p>Todo sobre el proceso selectivo, requisitos, fases y cómo prepararse con garantías.</p>
+          </a>
+          <a href="temario.html" class="relacionado-card">
+            <div class="cat">Temario</div>
+            <h4>Temario completo actualizado a la convocatoria 2026</h4>
+            <p>Los 60 temas organizados por bloques con la estructura del Anexo IV oficial.</p>
+          </a>
+          <a href="precios.html" class="relacionado-card">
+            <div class="cat">Preparación</div>
+            <h4>Modalidades de preparación con APOI</h4>
+            <p>Desde acceso a materiales hasta preparación intensiva con tutor personal.</p>
           </a>
         </div>
+      </div>
+    </section>
+  </main>
 
-      </aside>
-    </div>
-  </div>
-
-  <!-- ══ ARTÍCULOS RELACIONADOS ══════════════════════════ -->
-  <section class="relacionados">
+  <footer role="contentinfo">
     <div class="container">
-      <div class="seccion-header" style="margin-bottom:36px;">
-        <span class="etiqueta">Sigue leyendo</span>
-        <h2>Más recursos para prepararte</h2>
-        <span class="linea-dorada"></span>
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo"><span class="logo-siglas">APOI</span><span class="logo-texto">Academia de
+              Preparación de Oposiciones para Ingenieros</span></a>
+          <p class="footer-desc">Especialistas en oposiciones de Ingeniero Industrial de la Generalitat Valenciana.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="temario.html">Temario</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:info@apoi.es">info@apoi.es</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="relacionados-grid">
-        <a href="guia-oposiciones-ingeniero-industrial-gva.html" class="relacionado-card">
-          <div class="cat">Guía</div>
-          <h4>Oposiciones Ingeniero Industrial GVA: la guía completa</h4>
-          <p>Todo sobre el proceso selectivo, requisitos, fases y cómo prepararse con garantías.</p>
-        </a>
-        <a href="temario.html" class="relacionado-card">
-          <div class="cat">Temario</div>
-          <h4>Temario completo actualizado a la convocatoria 2026</h4>
-          <p>Los 60 temas organizados por bloques con la estructura del Anexo IV oficial.</p>
-        </a>
-        <a href="precios.html" class="relacionado-card">
-          <div class="cat">Preparación</div>
-          <h4>Modalidades de preparación con APOI</h4>
-          <p>Desde acceso a materiales hasta preparación intensiva con tutor personal.</p>
-        </a>
-      </div>
+      <div class="footer-bottom"><span>© 2026 APOI.</span><span><a href="#">Aviso legal</a> · <a
+            href="#">Privacidad</a></span></div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a href="index.html" class="logo"><span class="logo-siglas">APOI</span><span class="logo-texto">Academia de Preparación de Oposiciones para Ingenieros</span></a>
-        <p class="footer-desc">Especialistas en oposiciones de Ingeniero Industrial de la Generalitat Valenciana.</p>
-      </div>
-      <div class="footer-col"><h4>Navegación</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="temario.html">Temario</a></li><li><a href="precios.html">Precios</a></li><li><a href="guia-oposiciones-ingeniero-industrial-gva.html">Guía</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
-      <div class="footer-col"><h4>Contacto</h4><ul><li><a href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:info@apoi.es">info@apoi.es</a></li></ul></div>
-    </div>
-    <div class="footer-bottom"><span>© 2026 APOI.</span><span><a href="#">Aviso legal</a> · <a href="#">Privacidad</a></span></div>
-  </div>
-</footer>
-
-<a href="https://wa.me/34XXXXXXXXX" class="whatsapp-flotante" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.527 5.845L.057 23.547a.5.5 0 0 0 .609.637l5.886-1.545A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.967 0-3.81-.537-5.388-1.473l-.385-.228-3.993 1.048 1.015-3.895-.249-.397A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-</a>
-<script src="js/main.js"></script>
+  <a href="https://wa.me/34XXXXXXXXX" class="whatsapp-flotante" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.527 5.845L.057 23.547a.5.5 0 0 0 .609.637l5.886-1.545A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.967 0-3.81-.537-5.388-1.473l-.385-.228-3.993 1.048 1.015-3.895-.249-.397A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+    </svg>
+  </a>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
